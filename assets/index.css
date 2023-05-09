@@ -30,3 +30,46 @@ h1 {
     margin-top: 56px;
     margin-bottom: 62px;
 }
+.loqo{
+    margin: 8px 0px 0px 55px;
+
+width: 89px;
+height: 23px;
+
+
+}
+ul{
+    margin: -2px 3px -2px 349px;
+}
+
+
+li{
+
+    width: 101px;
+    height: 19px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.06em;
+    display: inline-block;
+    flex-wrap: wrap;
+    list-style: none;
+    
+    color: #959BA4;
+
+
+    }
+    li:hover{
+        color: #000000;
+    }
+.exit-btn{
+
+width: 58px;
+height: 33px;
+
+
+background: #FFFFFF;
+border-radius: 4px;
+}
