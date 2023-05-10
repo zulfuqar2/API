@@ -123,3 +123,9 @@ td:hover{
     background-color: purple;
     color: white;
 }
+.numb{
+    border: 2px solid black;
+    height: 30px;
+    margin-top: 18px;
+
+}
