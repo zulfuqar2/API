@@ -129,3 +129,63 @@ td:hover{
     margin-top: 18px;
 
 }
+
+.p-21{
+
+    width: 120px;
+    height: 28px;
+    
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    
+    color: #9F9F9F;
+    margin: 10px 0px 0px 93px;
+    
+    }
+    .box-2{
+        box-sizing: border-box;
+    
+    
+    width: 259px;
+    height: 102px;
+    
+    margin:0px 0px 0px 93px;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    }
+    
+    table{
+    
+        width: 259px;
+        height: 30px;
+        left: 253px;
+        top: 200px; 
+        border: 1px solid black;   
+        margin: 0px 0px 0px 93px;
+    
+        
+    }
+    tr{
+        margin: 0px 0xp 0px 93px;
+    }
+    
+    td:hover{
+        background-color: purple;
+        color: white;
+    }
+    .numbe{
+        border: 2px solid black;
+        height: 30px;
+        margin-top: 18px;
+    
+    }
+    .konverter{
+        display: flex;
+        flex-wrap: wrap;
+    }
