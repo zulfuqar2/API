@@ -1,46 +1,58 @@
-function getLink(base,to){
-    return `https://api.exchangerate.host/latest?base=${base}&symbols=${to}`;
-}
-
-const left_buttons = document.querySelector(".btn-left").children;
-const right_buttons = document.querySelector(".btn-right").children;
 
 
 
+const leftButtons = document.querySelector(".btn-left").children;
+const rightButtons = document.querySelector(".btn-right").children;
 
-function buttonChanger(btns){
-    for (let btn of btns) {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-      
-          for (let btn of btns) {
-           bas= btn.classList.remove("active-button");
-          }
-      
-          e.target.classList.add("active-button");
-        });
+
+function buttonChanger(btns) {
+  for (let btn of btns) {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      for (let btn of btns) {
+        btn.classList.remove("active-button");
       }
+
+      e.target.classList.add("active-button");
+
+      
+      fetchExchangeRate();
+    });
+  }
 }
 
+buttonChanger(leftButtons);
+buttonChanger(rightButtons);
 
+function fetchExchangeRate() {
+  const fromCurrency = document.querySelector(".btn-left .active-button").textContent;
+  const toCurrency = document.querySelector(".btn-right .active-button").textContent;
 
-function getData(lButtons,rButtons){
-    let base;
-    let to;
-    for(let btn of lButtons){
-        if(btn.classList.contains("active-button")){
-            console.log(btn.innerText);
-        }
-    }
-    for(let btn of rButtons){
-        if(btn.classList.contains("active-button")){
-            console.log(btn.innerText);
-            buttonChanger(left_buttons);
-buttonChanger(right_buttons);
-        }
-    }
+  fetch(`https://api.exchangerate.host/latest?base=${fromCurrency}&symbols=${toCurrency}`)
+    .then(response => response.json())
+    .then(data => {
+      const exchangeRate = data.rates[toCurrency];
+      const leftInput = document.querySelector(".left input");
+      const rightInput = document.querySelector(".right input");
 
+      
+      const leftText = `1 ${fromCurrency} = ${exchangeRate} ${toCurrency}`;
+      const leftParagraph = document.querySelector(".l_input");
+      leftParagraph.textContent = leftText;
+
+     
+      const leftInputValue = leftInput.value;
+      const rightInputValue = (leftInputValue * exchangeRate).toFixed(2);
+      rightInput.value = rightInputValue;
+      const rightText = `1 ${toCurrency} = ${(1 / exchangeRate).toFixed(4)} ${fromCurrency}`;
+      const rightParagraph = document.querySelector(".r_input");
+      rightParagraph.textContent = rightText;
+    });
 }
 
-
-
+window.onload = () => {
+  buttonChanger(leftButtons);
+  buttonChanger(rightButtons);
+  fetchExchangeRate();
+};
