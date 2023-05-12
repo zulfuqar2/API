@@ -8,86 +8,89 @@
     <link rel="stylesheet" href="./assets/index.css">
 </head>
 <body>
-    <nav id="bank">
-      <div class="loqo">
-
-        <img src="./assets/img/Group 6.png" alt="bankloqo">
-        <!-- <img  class="loqo" src="./assets/img/Asset 1@3x 1.png" alt=""> -->
-      </div>
-
-      <!-- <div class="section">
-    <ul>
-        <li>БАНК</li>
-        <li>БИЗНЕС</li>
-        <li>ИНВЕСТИЦИИ</li>
-        <li>СТРАХОВАНИЕ</li>
-        <li>МОБАЙЛ</li>
-        <li>ПУТЕШЕСТВИЯ</li>
-        <li>РАЗВЛЕЧЕНИЯ</li>
-    </ul>
-      </div>
-      <button class="exit-btn">ВОЙТИ</button> -->
-
-    </nav>
-<div class="main">
-
-    <h1>Конвертер валют онлайн</h1>
-
-    <div class="konverter">
-       
-      <div class="1-convert">
-        
-        <p class="p-1">У меня есть </p>
-        <table >
-        <tr onclick="MouseEvent">
-         <td>RUB</td>
-         <td>USD</td>
-         <td>EUR</td>
-         <td>GBP</td>
-      
-        </tr>
-      
-      </table>
-          <div class="box-1">
-      
-            <input class="numb" type="number">
-
-                  <p></p>
-
-          </div>
-
-
-
-    </div>
-   <div>  
-    <p class="p-21">Хочу приобрести</p>
 
     
-    <table >
-    <tr onclick="">
-     <td>RUB</td>
-     <td>USD</td>
-     <td>EUR</td>
-     <td>GBP</td>
-  
-    </tr>
-  
-  </table>
-      <div class="box-2">
-        <div class="amount-area">
-          
-        </div>
-  
-        
-    
 
-    
+
+    <header>
+
+        <div class="container">
+            <div class="navigation">
+                <div class="logo-img">
+                    <img src="./assets/img/Group 6.png" alt="">
+                </div>
+
+                <nav>
+                    <ul>
+                        <li>Bank</li>
+                        <li>Bussines</li>
+                        <li>Investment</li>
+                        <li>Insurance</li>
+                        <li>Mobile</li>
+                        <li>Travel</li>
+                        <li>Entertaimant</li>
+                    </ul>
+
+                </nav>
+
+                <div class="auth">
+
+                    <button>Sign in</button>
+                </div>
+            </div>
+
         </div>
 
-      </div>
-      
-    </div>
+    </header>
+
+    <main>
+
+        <h1>Конвертер валют онлайн</h1>
+
+        <div class="wrapper">
+            <div class="left">
+                <h3>У меня есть</h3>
+
+                <div class="btn-group btn-left">
+                    <a href="" class="active-button">RUB</a>
+                    <a href="" >USD</a>
+                    <a href="">EUR</a>
+                    <a href="">GBP</a>
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="number" onwheel="return false;" value="5000">
+                    <p>1 RUB = 0.0135 USD</p>
+                </div>
+
+            </div>
+            <div class="right">
+                <h3>Хочу приобрести</h3>
+                 <div class="btn-group btn-right">
+                     <a href="">RUB</a>
+                     <a href="" class="active-button">USD</a>
+                     <a href="">EUR</a>
+                     <a href="">GBP</a>
+                 </div>
+                 <div class="input-wrapper">
+                     <input type="number" onwheel="return false;" value="5000">
+                     <p>1 RUB = 0.0135 USD</p>
+                 </div>
+               
+
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+
 
     <script src="./assets/index.js"></script>
+
 </body>
 </html>
